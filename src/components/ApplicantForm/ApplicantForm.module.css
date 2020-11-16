@@ -1,0 +1,186 @@
+.applicantForm {
+    overflow-x: hidden;
+    background: #fff;
+    padding: 76px 16px 82px;
+}
+
+.title {
+    font-size: 40px;
+    line-height: 38px;
+    margin: 0 0 40px;
+}
+
+.error {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #F5222D;
+}
+
+.label {
+    display: block;
+}
+
+.input {
+    outline: none;
+    border: 1px solid #D9D9D9;
+    background: #ffffff;
+    width: 100%;
+    padding: 7px 12px;
+    border-radius: 2px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.input:hover {
+    border: 1px solid #40A9FF;
+    box-shadow: 0px 0px 4px rgba(24, 144, 255, 0.5);
+}
+
+.input:focus {
+    outline: none;
+    border: 1px solid #1890FF;
+    box-shadow: 0px 0px 4px rgba(24, 144, 255, 0.5);
+}
+
+.input.errorInput {
+    border: 1px solid#F5222D;
+    box-shadow: 0px 0px 4px rgba(245, 34, 45, 0.5);
+    color: #F5222D;
+}
+
+.personal, .gender {
+    margin-bottom: 40px;
+}
+
+.groupTitle {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 38px;
+    margin: 0 0 24px;
+}
+
+.personalInput {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.personalInput:last-child {
+    margin-bottom: 0;
+}
+
+.personalInput label {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.personalInput .error, .policychec .error {
+    position: absolute;
+    display: block;
+}
+
+.genderGroup label:first-child {
+    margin-right: 40px;
+}
+
+.genderGroup label {
+    font-size: 14px;
+    line-height: 22px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.genderGroup input[type='radio'] {
+    margin: 0 8px 0 0;
+    width: 16px;
+    height: 16px;
+}
+
+.gitlink {
+    margin-bottom: 48px;
+}
+
+.gitlink label {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.policychec {
+    margin-bottom: 43px;
+    position: relative;
+}
+
+.policychec label {
+    font-size: 14px;
+    line-height: 22px;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.policychec input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+    margin: 0 16px 0 0;
+}
+
+.sendBtn {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 0;
+    background: #1890FF;
+    border: 1px solid #1890FF;
+    border-radius: 2px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+
+.sendBtn:hover {
+    background: #40A9FF;
+    border: 1px solid #40A9FF;
+}
+
+.sendBtn:disabled {
+    background: #E8E8E8;
+    border: 1px solid#D9D9D9;
+    color: #BCBCBC;
+    cursor: auto;
+}
+
+@media (min-width: 560px) {
+    .personalInput, .gender, .gitlink {
+        width: 256px;
+    }
+
+    .sendBtn {
+        width: 360px;
+    }
+
+    .genderGroup {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .personal {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .fileInput {
+        padding-top: 21px;
+    }
+} 
+
+@media (min-width: 624px) {
+    .applicantForm {
+        max-width: 624px;
+        margin: 0 auto;
+    }
+}
+
+
+

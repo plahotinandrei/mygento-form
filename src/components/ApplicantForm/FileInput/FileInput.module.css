@@ -1,0 +1,95 @@
+.fileInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1px 0;
+}
+
+.file {
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 4px;
+    margin: 10px 0;
+    transition: all .2s;
+}
+
+.file.error {
+    color: red
+}
+
+.clip, .close {
+    width: 16px;
+    height: 16px;
+    fill: #8C8C8C;   
+}
+
+.file.error .clip, .file.error .close {
+    fill: red;   
+}
+
+.clip {
+    margin-right: 8px;
+}
+
+.close {
+    margin-left: auto;
+    visibility: hidden;
+}
+
+.fileName {
+    color: #1890FF;
+}
+
+.file.error .fileName {
+    color: red
+}
+
+.file:hover {
+    background: #E6F7FF;
+    cursor: pointer;
+}
+
+.file.error:hover {
+    background: #fff;
+}
+
+.file:hover .close, .file.error .close {
+    visibility: visible;
+}
+
+.drop {
+    width: 100%;
+    border: 1px dashed #D9D9D9;
+    border-radius: 2px;
+    background: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 9px 0;
+    position: relative;
+}
+
+.drop:focus {
+    outline: none;
+}
+
+.plus {
+    position: absolute;
+    fill: #8C8C8C;
+    width: 23px;
+    height: 23px;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);   
+}
+
+.dropText {
+    font-size: 14px;
+    line-height: 22px;
+    color: #595959;
+}
