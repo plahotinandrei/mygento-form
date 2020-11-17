@@ -3,8 +3,12 @@ import {FieldArray, Formik} from 'formik';
 import * as yup from 'yup';
 import styles from './ApplicantForm.module.css';
 import FileInput from './FileInput/FileInput.js';
+import FinalModal from './Modals/FinalModals.js';
+import PolicyModal from './Modals/PolicyModal.js';
 
 const ApplicantForm = (props) => {
+    const [state, setState] = React.useState({finalModalShow: false, policyModalShow: false});
+
     const validationSchema = yup.object().shape({
         firstname: yup.string().required('Введите имя'),
         lastname: yup.string().required('Введите фамилию'),
@@ -63,12 +67,19 @@ const ApplicantForm = (props) => {
                     policycheck: false
                 }}
                 validateOnBlur
-                onSubmit={(values) => {console.log(values)}}
+                onSubmit={(values) => {
+                    console.log(values);
+                    setState({
+                        ...state,
+                        finalModalShow: true
+                    })
+                }}
                 validationSchema={validationSchema}
             >
-                {({values, errors, touched, handleChange, handleBlur, isValid, handleSubmit, dirty}) => {
+                {({values, errors, touched, handleChange, handleBlur, isValid, handleSubmit, resetForm, dirty}) => {
                     
                     return (
+                        <>
                         <div className={styles.form}>
                             <p className={styles.groupTitle}>Личные данные</p>
                             <div className={styles.personal}>                                
@@ -154,9 +165,10 @@ const ApplicantForm = (props) => {
                                         <input 
                                             name='gender' 
                                             type='radio' 
-                                            value="male"
+                                            value='male'
                                             onChange={handleChange}
                                             onBlur={handleBlur}
+                                            checked={values.gender === 'male'}
                                         />
                                         Мужской
                                     </label>
@@ -165,9 +177,10 @@ const ApplicantForm = (props) => {
                                         <input 
                                             name='gender' 
                                             type='radio' 
-                                            value="female"
+                                            value='female'
                                             onChange={handleChange}
                                             onBlur={handleBlur}
+                                            checked={values.gender === 'female'}
                                             />
                                         Женский
                                     </label>
@@ -195,12 +208,24 @@ const ApplicantForm = (props) => {
                                         onBlur={handleBlur}
                                         checked={values.policycheck}
                                     />
-                                    * Я согласен с <span>политикой конфиденциальности</span>
+                                    * Я согласен с&nbsp;
+                                    <span 
+                                        className={styles.onpolicy}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            setState({
+                                                ...state,
+                                                policyModalShow: true
+                                            })
+                                        }}
+                                    >
+                                        политикой конфиденциальности
+                                    </span>
                                 </label>
                                 {errors.policycheck && <span className={styles.error}>{errors.policycheck}</span>}
                             </div>    
                             <button
-                                className={styles.sendBtn}
+                                className={`${styles.sendBtn} btnApp`}
                                 disabled={!isValid || !dirty}
                                 onClick={handleSubmit}
                                 type='submit'
@@ -208,6 +233,27 @@ const ApplicantForm = (props) => {
                                 Отправить
                             </button>
                         </div>
+                        <FinalModal
+                            name={values.firstname}
+                            show={state.finalModalShow}
+                            resetForm={resetForm}
+                            onHide={() => {
+                                setState({
+                                    ...state,
+                                    finalModalShow: false
+                                })
+                            }}
+                        />
+                        <PolicyModal
+                            show={state.policyModalShow}
+                            onHide={() => {
+                                setState({
+                                    ...state,
+                                    policyModalShow: false
+                                })
+                            }}
+                        />
+                        </>
                     )
                 }}
             </Formik>

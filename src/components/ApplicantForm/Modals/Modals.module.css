@@ -1,0 +1,54 @@
+.content {
+    padding: 32px 16px 16px;
+    text-align: center;
+    position: relative;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 38px;
+}
+
+.text {
+    font-size: 20px;
+    line-height: 38px;
+}
+
+.btn {
+    width: 100%;
+    max-width: 360px;
+}
+
+.final .title {
+    margin: 0 0 8px;
+}
+
+.final .text {
+    margin: 0 0 40px;
+}
+
+.policy .title {
+    margin-bottom: 32px;
+}
+
+.policy .text {
+    text-align: left;
+    height: 450px;
+    overflow-y: auto;
+    margin-bottom: 32px;
+}
+
+.policy .text .title {
+    font-weight: 600;
+}
+
+.policy .text p {
+    margin: 0;
+}
+
+@media (min-width: 560px) {
+    .content {
+        padding: 40px;
+    }
+}
