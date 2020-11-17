@@ -1,5 +1,6 @@
 import {Modal} from 'react-bootstrap';
 import styles from './Modals.module.css';
+import sprite from './../../../assets/img/form-sprite.svg'
 
 const PolicyModal = (props) => {
     return (
@@ -11,6 +12,12 @@ const PolicyModal = (props) => {
             backdrop="static"
         >
             <div className={`${styles.content} ${styles.policy}`}>
+                <svg 
+                    className={styles.close}
+                    onClick={props.onHide}
+                >
+                    <use href={sprite + '#close'}/>
+                </svg>
                 <p className={styles.title}>Политика конфиденциальности</p>
                 <div className={styles.text}>
                     <p className={styles.title}>1. Общие положения</p>
@@ -75,7 +82,7 @@ const PolicyModal = (props) => {
                     <p>5.2. Оператор обрабатывает обезличенные данные о Пользователе в случае, если это разрешено в настройках браузера Пользователя (включено сохранение файлов «cookie» и использование технологии JavaScript).</p>
                     
                     <p className={styles.title}>6. Порядок сбора, хранения, передачи и других видов обработки персональных данных</p>
-                    
+
                     <p>Безопасность персональных данных, которые обрабатываются Оператором, обеспечивается путем реализации правовых, организационных и технических мер, необходимых для выполнения в полном объеме требований действующего законодательства в области защиты персональных данных.</p>
 
                     <p>6.1. Оператор обеспечивает сохранность персональных данных и принимает все возможные меры, исключающие доступ к персональным данным неуполномоченных лиц.</p>

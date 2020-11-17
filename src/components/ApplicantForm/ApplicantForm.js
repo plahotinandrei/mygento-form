@@ -10,8 +10,8 @@ const ApplicantForm = (props) => {
     const [state, setState] = React.useState({finalModalShow: false, policyModalShow: false});
 
     const validationSchema = yup.object().shape({
-        firstname: yup.string().required('Введите имя'),
-        lastname: yup.string().required('Введите фамилию'),
+        firstname: yup.string().matches(/(^[a-zA-Zа-яА-Я_' ']*$)/, 'В имени могут быть только буквы').required('Введите имя'),
+        lastname: yup.string().matches(/(^[a-zA-Zа-яА-Я_' ']*$)/, 'В фамилии могут быть только буквы').required('Введите фамилию'),
         email: yup.string().email('Пожалуйста укажите электронную почту').required('Введите электронную почту'),
         file: yup.array().of(yup.object().shape({
             file: yup.mixed().test('fileSize', 'загружайте файл размером не более 16 mb', (value) => {
@@ -23,7 +23,6 @@ const ApplicantForm = (props) => {
         gender: yup.string().required('Укажите пол'),
         policycheck: yup.boolean().oneOf([true], 'Обязательное поле')
     })
-    //.matches(/([А-Яа-я|^0-9])/, 'В имени могут быть только буквы')
 
     const getFileSchema = (file) => file && ({
         file: file,

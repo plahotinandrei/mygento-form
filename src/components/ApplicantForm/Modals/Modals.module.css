@@ -5,7 +5,8 @@
 }
 
 .title {
-    font-weight: bold;
+    font-family: 'SFProDisplay-Bold', sans-serif;
+    font-weight: 600;
     font-size: 24px;
     line-height: 38px;
 }
@@ -40,11 +41,22 @@
 }
 
 .policy .text .title {
+    font-family: 'SFProDisplay-Bold', sans-serif;
     font-weight: 600;
 }
 
 .policy .text p {
     margin: 0;
+}
+
+.close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    fill: #2F80ED;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
 
 @media (min-width: 560px) {

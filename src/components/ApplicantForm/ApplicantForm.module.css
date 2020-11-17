@@ -1,5 +1,4 @@
 .applicantForm {
-    overflow-x: hidden;
     background: #fff;
     padding: 76px 16px 82px;
 }
@@ -54,6 +53,7 @@
 }
 
 .groupTitle {
+    font-family: 'SFProDisplay-Bold', sans-serif;
     font-size: 22px;
     font-weight: 600;
     line-height: 38px;
@@ -113,9 +113,6 @@
 .policychec label {
     font-size: 14px;
     line-height: 22px;
-    display: inline-flex;
-    align-items: center;
-    white-space: nowrap;
 }
 
 .policychec input[type='checkbox'] {
@@ -132,6 +129,13 @@
 
 .sendBtn {
     width: 100%;
+}
+
+@media (min-width: 360px) {
+    .policychec label {
+        display: inline-flex;
+        align-items: center;
+    }
 }
 
 @media (min-width: 560px) {
@@ -155,7 +159,7 @@
     }
 
     .fileInput {
-        padding-top: 21px;
+        padding-top: 28px;
     }
 } 
 
