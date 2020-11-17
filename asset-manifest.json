@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/mygento-form/static/css/main.4722a477.chunk.css",
+    "main.css": "/mygento-form/static/css/main.ee27811d.chunk.css",
     "main.js": "/mygento-form/static/js/main.18a744cb.chunk.js",
     "main.js.map": "/mygento-form/static/js/main.18a744cb.chunk.js.map",
     "runtime-main.js": "/mygento-form/static/js/runtime-main.8c0c3006.js",
@@ -12,16 +12,16 @@
     "static/js/3.05f79f08.chunk.js.map": "/mygento-form/static/js/3.05f79f08.chunk.js.map",
     "index.html": "/mygento-form/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/mygento-form/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.4722a477.chunk.css.map": "/mygento-form/static/css/main.4722a477.chunk.css.map",
+    "static/css/main.ee27811d.chunk.css.map": "/mygento-form/static/css/main.ee27811d.chunk.css.map",
     "static/js/2.7b85ddb7.chunk.js.LICENSE.txt": "/mygento-form/static/js/2.7b85ddb7.chunk.js.LICENSE.txt",
-    "static/media/fonts.css": "/mygento-form/static/media/SFProDisplay-Regular.e894d95e.woff",
+    "static/media/fonts.css": "/mygento-form/static/media/SFProDisplay-Regular.1e1c0e29.ttf",
     "static/media/form-sprite.03dc6950.svg": "/mygento-form/static/media/form-sprite.03dc6950.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8c0c3006.js",
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.7b85ddb7.chunk.js",
-    "static/css/main.4722a477.chunk.css",
+    "static/css/main.ee27811d.chunk.css",
     "static/js/main.18a744cb.chunk.js"
   ]
 }
