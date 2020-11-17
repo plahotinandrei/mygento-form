@@ -68,6 +68,14 @@ const ApplicantForm = (props) => {
                 validateOnBlur
                 onSubmit={(values) => {
                     console.log(values);
+                    let formData = new FormData();
+                    for(let key in values) {
+                        if(typeof values[key] == 'object') {
+                            formData.append(key, values[key][0]['file'], values[key][0]['name']);
+                        }else {
+                            formData.append(key, values[key]);
+                        }
+                    }
                     setState({
                         ...state,
                         finalModalShow: true
